@@ -19,26 +19,24 @@
 }
 
 .pagesDiv {
-    height: 11em;
-    width: 15em;
+    height: 9em;
+    width: 13em;
     background-color: #bd2b38;
     display: flex;
     justify-content: center;
     margin-left: 4em;
     margin-right: 4em;
     cursor: pointer;
-    border-radius: 0 35px 0 10px;
+    border-radius: 0 25px 0 10px;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-pagesDiv:hover {
-    
+.pagesDiv:hover {
+    box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.8);
+    background-color: #cd3340;
 }
 
 h1 {
     margin: auto;
     font: sans-serif;
-}
-
-p {
-    color: #011b2c;
 }
