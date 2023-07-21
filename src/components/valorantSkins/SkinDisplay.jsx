@@ -1,16 +1,30 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import styles from "../../styles/ValorantSkins/SkinDisplay.module.css"
 
 function SkinDisplay (props) {
-
+    const [isNotStandardSkin, setIsnotStandardSkin ] = useState(true)
     const skin = props.skin
+    console.log(skin)
+    useEffect(() => {
+        let skinName = skin.displayName
+        if(skinName.toLowerCase().includes("standard")) {
+            setIsnotStandardSkin(false)
+        }
+    },[skin])
+    
 
     return (
-        <div>
-            <p>
-                {skin.displayName}
-            </p>
-        </div>
+        <>
+            {isNotStandardSkin 
+            ? <div>
+                    <p>
+                        {skin.displayName}
+                    </p>
+                    <img src={skin.displayIcon} alt="Image Unavailable" />
+                </div>  
+            : null
+            }
+        </>
     )
 } 
 

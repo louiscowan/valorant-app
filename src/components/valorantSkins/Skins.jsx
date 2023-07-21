@@ -1,4 +1,5 @@
 import styles from "../../styles/valorantSkins/Skins.module.css"
+import NavBar from "../NavBar";
 import SkinDisplay from "./SkinDisplay"
 import { useState, useEffect } from 'react';
 
@@ -37,19 +38,22 @@ function Skins() {
 
   return (
     <div>
-      {skins.length > 0 ? (
-        <div>
-          {skins.map((skin) => (
-            <SkinDisplay key={skin.uuid} skin={skin} />
-          ))}
-        </div>
-      ) : (
-        <div>No skins to display.</div>
-      )}
-      <button onClick={handlePrevPage} disabled={currentPage === 1}>
-        Prev
-      </button>
-      <button onClick={handleNextPage}>Next</button>
+      <NavBar />
+      <div>
+        {skins.length > 0 ? (
+          <div className={styles.skinDisplayDiv}>
+            {skins.map((skin) => (
+              <SkinDisplay key={skin.uuid} skin={skin} />
+            ))}
+          </div>
+        ) : (
+          <div>No skins to display.</div>
+        )}
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+          Prev
+        </button>
+        <button onClick={handleNextPage}>Next</button>
+      </div>
     </div>
   );
 }

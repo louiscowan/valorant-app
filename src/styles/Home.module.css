@@ -2,25 +2,25 @@
     background-image: url(valorant-app-background.jpeg);
     background-size: cover;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     min-height: 100vh;
-    /* height: 100%; */
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-width: 400px) {
+    .pagesDivContainer {
+        justify-content: space;
+    }
+
     .pagesDiv {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin: 0 0 0 0;
     }
 }
 
 .pagesDiv {
-    height: 9em;
-    width: 13em;
+    height: 5em;
+    width: 12em;
     background-color: #bd2b38;
     display: flex;
     justify-content: center;
