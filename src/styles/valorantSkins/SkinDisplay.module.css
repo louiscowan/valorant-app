@@ -1,0 +1,10 @@
+.skinDiv {
+    max-width: 100vw;
+    background-color: #d1d1d1;
+    margin: 0.6em;
+    color: black;
+}
+
+.skinImage {
+    max-width: 100%;
+}

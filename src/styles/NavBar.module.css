@@ -8,7 +8,7 @@
   
   .navbarRouteWord {
     color: #0F1724;
-    padding: 8px 2.8em 8px 8px;
+    padding: 8px 1.4em 8px 1.4em;
     font-size: 1.5em;
     cursor: pointer;
   }
@@ -18,9 +18,10 @@
   }
 
   .logo {
-    height: 40px;
-    width: 40px;
+    height: 5em;
+    width: 5em;
     padding-left: 2em;
+    cursor: pointer;
   }
   
   .routeWords {
@@ -35,6 +36,7 @@
   .hamburger {
     display: none;
     cursor: pointer;
+    margin-right: 2em;
   }
   
   .line {
