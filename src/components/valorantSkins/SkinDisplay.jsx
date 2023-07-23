@@ -10,7 +10,7 @@ function SkinDisplay (props) {
     useEffect(() => {
         let skinName = skin.displayName
 
-        if(skinName.toLowerCase().includes("standard") || skin.displayIcon === null) {
+        if(skinName.toLowerCase().includes("standard") || skin.displayIcon === null || skinName.toLowerCase() === "random favorite skin") {
             setIsnotStandardSkin(false)
         }
     },[skin])
@@ -20,10 +20,10 @@ function SkinDisplay (props) {
         <>
             {isNotStandardSkin 
             ? <div className={styles.skinDiv}>
-                    <h2>
+                    <img src={skin.displayIcon} alt="Image Unavailable" className={styles.skinImage} />
+                    <h2 className={styles.displayName}>
                         {skin.displayName}
                     </h2>
-                    <img src={skin.displayIcon} alt="Image Unavailable" className={styles.skinImage} />
                 </div>  
             : null
             }
