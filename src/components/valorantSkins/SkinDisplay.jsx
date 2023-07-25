@@ -9,7 +9,7 @@ function SkinDisplay (props) {
 
     useEffect(() => {
         let skinName = skin.displayName
-
+        
         if(skinName.toLowerCase().includes("standard") || skin.displayIcon === null || skinName.toLowerCase() === "random favorite skin") {
             setIsnotStandardSkin(false)
         }
