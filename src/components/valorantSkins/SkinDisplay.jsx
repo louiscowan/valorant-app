@@ -3,7 +3,6 @@ import styles from "../../styles/valorantSkins/SkinDisplay.module.css"
 
 function SkinDisplay (props) {
     const skin = props.skin
-    console.log(skin)
 
     const [isNotStandardSkin, setIsnotStandardSkin ] = useState(true)
 
@@ -19,7 +18,7 @@ function SkinDisplay (props) {
     return (
         <>
             {isNotStandardSkin 
-            ? <div className={styles.skinDiv}>
+            ?   <div className={styles.skinDiv}>
                     <img src={skin.displayIcon} alt="Image Unavailable" className={styles.skinImage} />
                     <h2 className={styles.displayName}>
                         {skin.displayName}
