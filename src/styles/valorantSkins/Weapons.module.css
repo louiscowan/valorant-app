@@ -1,0 +1,14 @@
+.weaponNameDiv {
+    padding: 0 4em 0 1.5em;
+}
+
+.weaponNameDiv:hover {
+    background-color: rgba(74, 95, 129, 0.4);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .weaponNameDiv {
+        display:none;
+    }
+}
