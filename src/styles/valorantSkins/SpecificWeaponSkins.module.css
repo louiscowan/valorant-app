@@ -1,0 +1,18 @@
+.valorantWeapons {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(44, 65, 100, 0.4);
+}
+
+.skinDisplayDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.2em;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+}

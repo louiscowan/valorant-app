@@ -25,7 +25,7 @@ function NavBar () {
   
     return (
         <nav className={styles.navbar}>
-            <img className={styles.logo} src="valorant-logo-transparent-free-png.webp" alt="Logo" onClick={() => navbarRouteClicked("Logo")} />
+            <img className={styles.logo} src="../valorant-logo-transparent-free-png.webp" alt="Logo" onClick={() => navbarRouteClicked("Logo")} />
           <div className={`${styles['routeWords']} ${isMenuOpen ? styles.active : ''}`}>
             <div className={styles.navbarRouteWord} onClick={() => navbarRouteClicked("Skins")}>Skins</div>
             <div className={styles.navbarRouteWord} onClick={() => navbarRouteClicked("Maps")}>Maps</div>

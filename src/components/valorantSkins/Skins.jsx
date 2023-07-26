@@ -33,16 +33,23 @@ function Skins() {
   async function getWeapons () {
     const weapons = await fetch("https://valorant-api.com/v1/weapons")
     const weaponsData = await weapons.json()
-    console.log(weaponsData.data)
     setWeapons(weaponsData.data)
   }
 
+  function scrollToTopOfPage () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
 
   function handleNextPage () {
     setCurrentPage((prevPage) => prevPage + 1);
+    scrollToTopOfPage()
   }
 
   function handlePrevPage () {
+    scrollToTopOfPage()
     if (currentPage > 1) {
       setCurrentPage((prevPage) => prevPage - 1);
     }
@@ -61,21 +68,21 @@ function Skins() {
         : null
         }
         {skins.length > 0 ? (
-          <div>
-            <div className={styles.skinDisplayDiv}>
-              {skins.map((skin) => (
-                <SkinDisplay key={skin.uuid} skin={skin} />
-              ))}
-            </div>
-              <div className={styles.pageButtonsDiv}>
-                <button  className={styles.pageButton} onClick={handlePrevPage} disabled={currentPage === 1}>
-                  Prev
-                </button>
-                <button className={styles.pageButton} onClick={handleNextPage}>
-                  Next
-                </button>
-              </div>
-            </div>
+      <div>
+        <div className={styles.skinDisplayDiv}>
+          {skins.map((skin) => (
+            <SkinDisplay key={skin.uuid} skin={skin} />
+          ))}
+        </div>
+          <div className={styles.pageButtonsDiv}>
+            <button  className={styles.pageButton} onClick={handlePrevPage} disabled={currentPage === 1}>
+              Prev
+            </button>
+            <button className={styles.pageButton} onClick={handleNextPage}>
+              Next
+            </button>
+          </div>
+        </div>
         ) : (
           <div>No skins to display.</div>
           )}
