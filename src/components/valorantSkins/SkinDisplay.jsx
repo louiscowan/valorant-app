@@ -16,12 +16,11 @@ function SkinDisplay (props) {
             setIsnotStandardSkin(false)
         }
     },[skin])
-    
-    console.log("skin", skin)
+
     return (
         <>
             {isNotStandardSkin 
-            ?   <div className={styles.skinDiv} onClick={() => navigate(`/weaponSkinSingleView/:${skin.uuid}`)}>
+            ?   <div className={styles.skinDiv} onClick={() => navigate(`/weaponSkinSingleView/${skin.uuid}`)}>
                     <img src={skin.displayIcon} alt="Image Unavailable" className={styles.skinImage} />
                     <h2 className={styles.displayName}>
                         {skin.displayName}

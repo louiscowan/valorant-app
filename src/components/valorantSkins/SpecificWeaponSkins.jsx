@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import styles from "../../styles/valorantSkins/SpecificWeaponSkins.module.css"
+import styles from "../../styles/valorantSkins/SpecificGunWeaponSkins.module.css"
 import NavBar from "../NavBar"
 import Weapons from "./Weapons"
 import SkinDisplay from "./SkinDisplay"
 
-function SpecificWeaponSkins () {
+function SpecificGunWeaponSkins () {
     const [ weapons, setWeapons ] = useState([])
     const [ singleWeaponSkins, setSingleWeaponSkins ] = useState([])
     const params = useParams()
@@ -56,4 +56,4 @@ function SpecificWeaponSkins () {
     )
 }
 
-export default SpecificWeaponSkins
+export default SpecificGunWeaponSkins
